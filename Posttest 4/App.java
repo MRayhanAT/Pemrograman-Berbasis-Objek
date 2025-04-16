@@ -16,7 +16,7 @@ class Alat {
         System.out.println("Alat: " + namaAlat + " | Harga: Rp" + harga + " | ID: " + id);
     }
 
-    // ✅ Method Overloading
+    //Method Overloading
     public void tampilkanInfo(boolean lengkap) {
         if (lengkap) {
             System.out.println(">> Detail Lengkap Alat <<");
@@ -34,7 +34,7 @@ class AlatSyuting extends Alat {
         super(id, namaAlat, harga);
     }
 
-    // ✅ Method Overriding
+    //Method Overriding
     @Override
     public void tampilkanInfo() {
         System.out.println("Alat Syuting: " + namaAlat + " | Harga Sewa/Hari: Rp" + harga);
