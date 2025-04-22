@@ -22,14 +22,15 @@ abstract class Alat {
             System.out.println(">> Detail Lengkap Alat <<");
             System.out.println("ID       : " + id);
             System.out.println("Nama     : " + namaAlat);
-            System.out.println("Jenis    : " + jenis);
             System.out.println("Harga    : Rp" + harga);
+            infoAlat();
         } else {
             tampilkanInfo();
         }
     }
 
     
+
     public final void infoAlat() {
         System.out.println("Jenis alat ini adalah: " + jenis);
     }
@@ -43,7 +44,8 @@ final class AlatSyuting extends Alat {
     
     @Override
     public void tampilkanInfo() {
-        System.out.println("Alat Syuting: " + namaAlat + " | Harga Sewa/Hari: Rp" + harga);
+        System.out.println("Alat Syuting: " + namaAlat + " | Harga Sewa/Hari: Rp" + harga );
+        infoAlat();
     }
 }
 
@@ -84,6 +86,7 @@ public class App {
                         System.out.println("Daftar Alat (Versi Detail):");
                         for (Alat alat : daftarAlat) {
                             alat.tampilkanInfo(true);
+                            
                         }
                     }
                 }
